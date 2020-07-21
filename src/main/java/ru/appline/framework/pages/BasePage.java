@@ -67,7 +67,6 @@ public class BasePage {
         ((JavascriptExecutor) DriverManager.getDriver()).executeScript("arguments[0].scrollIntoView(false);", element);
         Wait<WebDriver> wait = new WebDriverWait(DriverManager.getDriver(), 15);
         wait.until(ExpectedConditions.elementToBeClickable(element));
-        Actions action = new Actions(DriverManager.getDriver());
-        action.click(element).build().perform();
+        element.click();
     }
 }

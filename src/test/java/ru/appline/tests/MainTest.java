@@ -21,7 +21,7 @@ public class MainTest extends BaseTest {
     @CsvFileSource(resources = "/testParams.csv", delimiter = ';', numLinesToSkip = 1)
     public void test(String objectLastName, String objectFirstName, String objectBirthDate, String subjectLastName,
                      String subjectFirstName, String subjectMiddleName, String subjectBirthDate, String clientSex,
-                     String passportSeries, String passportNumber, String documentDate, String documentIssue) throws InterruptedException {
+                     String passportSeries, String passportNumber, String documentDate, String documentIssue) {
 
         // Создание обьектов страниц
 

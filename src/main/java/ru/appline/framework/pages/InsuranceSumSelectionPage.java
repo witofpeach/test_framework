@@ -19,7 +19,7 @@ public class InsuranceSumSelectionPage extends BasePage {
 
     public void clickButtonSubmit() {
         if (checkPresence(buttonSubmit))
-            hoverAndClick(buttonSubmit);
+            click(buttonSubmit);
         else
             Assert.fail("Couldn't click submit button");
     }
