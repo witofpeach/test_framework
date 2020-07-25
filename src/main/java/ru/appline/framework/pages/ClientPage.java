@@ -11,17 +11,19 @@ public class ClientPage extends ru.appline.framework.pages.BasePage {
     @FindBy(xpath = "//a[text()='Страхование путешественников' and @class='lg-menu__sub-link']")
     WebElement linkTravelInsurance;
 
-    public void clickInsuranceMenu() {
+    public ClientPage clickInsuranceMenu() {
         if (isElementPresent(buttonInsuranceMenu))
             hover(buttonInsuranceMenu);
 //        else
 //            Assert.fail("Couldn't click insurance menu");
+        return this;
     }
 
-    public void clickTravelInsurance() {
+    public TravelInsurancePage clickTravelInsurance() {
         if (isElementPresent(linkTravelInsurance))
             click(linkTravelInsurance);
 //        else
 //            Assert.fail("Couldn't click travel insurance menu");
+        return pagesManager.getTravelInsurancePage();
     }
 }

@@ -12,15 +12,17 @@ public class InsuranceSumSelectionPage extends BasePage {
     @FindBy(xpath = "//button[text()='Оформить']")
     WebElement buttonSubmit;
 
-    public void selectMinimalInsuranceSum() {
+    public InsuranceSumSelectionPage selectMinimalInsuranceSum() {
         if (!checkPresence(cardMinimalInsuranceSum))
             Assert.fail("Couldn't find minimal sum card");
+        return this;
     }
 
-    public void clickButtonSubmit() {
+    public ClientInfoInsuranceFormPage clickButtonSubmit() {
         if (checkPresence(buttonSubmit))
             click(buttonSubmit);
         else
             Assert.fail("Couldn't click submit button");
+        return pagesManager.getClientInfoInsuranceFormPage();
     }
 }

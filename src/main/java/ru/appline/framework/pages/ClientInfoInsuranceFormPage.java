@@ -82,60 +82,72 @@ public class ClientInfoInsuranceFormPage extends ru.appline.framework.pages.Base
 
     // Методы для заполнения полей
 
-    public void setInputObjectOfInsuranceLastName(String lastName) {
+    public ClientInfoInsuranceFormPage setInputObjectOfInsuranceLastName(String lastName) {
         fillField(inputObjectOfInsuranceLastName, lastName);
+        return this;
     }
 
-    public void setInputObjectOfInsuranceFirstName(String firstName) {
+    public ClientInfoInsuranceFormPage setInputObjectOfInsuranceFirstName(String firstName) {
         fillField(inputObjectOfInsuranceFirstName, firstName);
+        return this;
     }
 
-    public void setInputObjectOfInsuranceBirthDate(String objectBirthDateInput) {
+    public ClientInfoInsuranceFormPage setInputObjectOfInsuranceBirthDate(String objectBirthDateInput) {
         String objectBirthDate = objectBirthDateInput.replaceAll("[.]+[/]+", "");
         fillField(inputObjectOfInsuranceBirthDate, objectBirthDate);
+        return this;
     }
 
-    public void setInputSubjectOfInsuranceLastName(String lastName) {
+    public ClientInfoInsuranceFormPage setInputSubjectOfInsuranceLastName(String lastName) {
         fillField(inputSubjectOfInsuranceLastName, lastName);
+        return this;
     }
 
-    public void setInputSubjectOfInsuranceFirstName(String firstName) {
+    public ClientInfoInsuranceFormPage setInputSubjectOfInsuranceFirstName(String firstName) {
         fillField(inputSubjectOfInsuranceFirstName, firstName);
+        return this;
     }
 
-    public void setInputSubjectOfInsuranceMiddleName(String middleName) {
+    public ClientInfoInsuranceFormPage setInputSubjectOfInsuranceMiddleName(String middleName) {
         fillField(inputSubjectOfInsuranceMiddleName, middleName);
+        return this;
     }
 
-    public void setInputSubjectOfInsuranceBirthDate(String subjectBirthDateInput) {
+    public ClientInfoInsuranceFormPage setInputSubjectOfInsuranceBirthDate(String subjectBirthDateInput) {
         String subjectBirthDate = subjectBirthDateInput.replaceAll("[.]+", "");
         fillField(inputSubjectOfInsuranceBirthDate, subjectBirthDate);
         click(inputPassportSeries);
+        return this;
     }
 
-    public void setClientSex(String sex) {
+    public ClientInfoInsuranceFormPage setClientSex(String sex) {
         if (sex.equals("Мужской")) {
             hoverAndClick(inputSubjectOfInsuranceSexMale);
         } else if (sex.equals("Женский")) {
             hoverAndClick(inputSubjectOfInsuranceSexFemale);
         }
+        return this;
     }
 
-    public void setInputPassportSeries(String passportSeries) {
+    public ClientInfoInsuranceFormPage setInputPassportSeries(String passportSeries) {
         fillField(inputPassportSeries, passportSeries);
+        return this;
     }
 
-    public void setInputPassportNumber(String passportNumber) {
+    public ClientInfoInsuranceFormPage setInputPassportNumber(String passportNumber) {
         fillField(inputPassportNumber, passportNumber);
+        return this;
     }
 
-    public void setInputDocumentDate(String documentDateInput) {
+    public ClientInfoInsuranceFormPage setInputDocumentDate(String documentDateInput) {
         String documentDate = documentDateInput.replaceAll("[.]+", "");
         fillFieldAction(inputDocumentDate, documentDate);
+        return this;
     }
 
-    public void setInputDocumentIssue(String documentIssue) {
+    public ClientInfoInsuranceFormPage setInputDocumentIssue(String documentIssue) {
         fillField(inputDocumentIssue, documentIssue);
+        return this;
     }
 
     // -------
